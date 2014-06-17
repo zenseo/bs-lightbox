@@ -22,10 +22,11 @@
   "gitHead": "cfc54cd506ed67e77d34e1a6a812190a0e383c4b",
   "devDependencies": {
     "gutil": "^1.1.1",
-    "gulp-include": "^0.2.3",
     "gulp-uglify": "^0.3.0",
     "gulp-coffee": "^2.0.1",
     "gulp": "^3.8.0",
-    "gulp-less": "^1.2.3"
+    "gulp-less": "^1.2.3",
+    "gulp-rename": "^1.2.0",
+    "gulp-minify-css": "^0.3.4"
   }
 }

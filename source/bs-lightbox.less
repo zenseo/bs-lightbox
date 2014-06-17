@@ -1,3 +1,80 @@
 .test{
 	color: blue;
 }
+
+.lightbox-modal{
+	.modal-dialog{
+		min-width: 60%;
+	}
+	.modal-body{
+		display: block;
+	}
+	.modal-images{
+		display: block;
+		text-align: center;
+		position: relative;
+		width: 100%;
+		height: auto;
+		img{
+			display: block;
+			margin: 0 auto;
+			top: 0;
+			left: 0;
+			z-index: 10;;
+    overflow: hidden;
+
+			&.active{
+				z-index: 20;
+			}
+		}
+	}
+	.modal-header{
+		z-index: 100;
+	}
+	.modal-switcher{
+		z-index: 50;
+		position: absolute;
+		color: rgb(255, 255, 255);
+		top: 0;
+		font-size: 60px;
+		width: 95%;
+		height: 100%;
+		a{
+			-webkit-transition: all .5s ease-in-out;
+			-moz-transition: all .5s ease-in-out;
+			-ms-transition: all .5s ease-in-out;
+			-o-transition: all .5s ease-in-out;
+			transition: all .5s ease-in-out;
+			opacity: 0;
+			width:50%;
+			height: 100%;
+			color: rgb(255, 255, 255);
+			
+			&:hover{
+				opacity: 1;
+			}
+			i{				
+				position: absolute;
+				top: 50%;
+margin-top: -56px;
+			}
+
+			&.pull-right{
+				i{
+					padding: 0 20px 0 0;
+					right: 0;
+				}
+				text-align: right;
+			}
+			&.pull-left{
+				text-align: left;
+				i{
+					left: 0;
+					padding: 0 0 0 20px;
+				}
+			}
+			
+		}
+	}
+
+}

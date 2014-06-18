@@ -83,7 +83,7 @@ Lightbox = {
     var img, source, title;
     this._unbindGallery();
     element = $(element);
-    source = element.attr('href');
+    source = element.data('remote');
     title = element.data('title');
     this.modal.find('.modal-switcher').hide();
     this.modal_setTitle(title);
@@ -100,7 +100,7 @@ Lightbox = {
   _makeGallery: function(element) {
     var galleryName, image, images, img, source, src, title, _i, _len;
     element = $(element);
-    src = element.attr('href');
+    src = element.data('remote');
     title = element.data('title');
     this.modal_setTitle(title);
     galleryName = element.data('gallery');
@@ -109,7 +109,7 @@ Lightbox = {
     for (_i = 0, _len = images.length; _i < _len; _i++) {
       image = images[_i];
       image = $(image);
-      source = image.attr('href');
+      source = image.data('remote');
       title = image.data('title');
       img = $('<img/>', {
         src: source,
@@ -176,7 +176,7 @@ $.fn.bsLightbox = function(options) {
     var $this;
     $this = $(this);
     options = $.extend({
-      source: $this.attr('href'),
+      source: $this.attr('data-remote'),
       type: $this.attr('data-type')
     }, options, $this.data());
     Lightbox._create(this, options);

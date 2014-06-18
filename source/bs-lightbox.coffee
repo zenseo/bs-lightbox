@@ -82,7 +82,7 @@ Lightbox =
 		do @._unbindGallery
 		element = $ element
 		source = element
-			.attr 'href'
+			.data 'remote'
 		title = element
 			.data 'title'
 
@@ -110,7 +110,7 @@ Lightbox =
 		element = $ element
 
 		src = element
-			.attr 'href'
+			.data 'remote'
 		title = element
 			.data 'title'
 
@@ -128,7 +128,7 @@ Lightbox =
 		for image in images
 			image = $ image
 			source = image
-				.attr 'href'
+				.data 'remote'
 			title = image
 				.data 'title'
 			img = $ '<img/>',
@@ -205,7 +205,7 @@ $.fn.bsLightbox = ( options ) ->
 	@each ->
 		$this = $(this)
 		options = $.extend({
-			source : $this.attr('href')
+			source : $this.attr('data-remote')
 			type : $this.attr('data-type')
 		}, options, $this.data())
 		Lightbox._create @, options

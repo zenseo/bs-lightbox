@@ -1,6 +1,6 @@
 {
   "name": "bs-lightbox",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "homepage": "https://github.com/MnicH54/bs-lightbox",
   "main": "./dist/bs-lightbox.min.js",
   "authors": [

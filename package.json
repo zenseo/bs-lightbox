@@ -1,6 +1,6 @@
 {
   "name": "bs-lightbox",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "description": "A lightbox gallery plugin for Bootstrap 3 based on the Modal plugin.",
   "style": "./dist/bs-lightbox.min.css",
   "less": "./source/bs-lightbox.less",
